@@ -59,7 +59,7 @@ const GenerateImageForm = ({
     setGenerateImageLoading(true);
     await GenerateAIImage({ prompt: post.prompt })
       .then((res) => {
-        setPost({
+        setPost({ 
           ...post,
           photo: `data:image/jpge;base64,${res?.data?.photo}`,
         });

@@ -75,7 +75,7 @@ const Home = () => {
     setLoading(false);
     await GetPosts()
       .then((res) => {
-        setLoading(false);
+        setLoading(true);
         setPosts(res?.data?.data);
         setFilteredPosts(res?.data?.data);
       })
