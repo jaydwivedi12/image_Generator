@@ -56,6 +56,7 @@ const GenerateImageForm = ({
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const generateImageFun = async () => {
+    console.log(post) ;
     setGenerateImageLoading(true);
     await GenerateAIImage({ prompt: post.prompt })
       .then((res) => {
